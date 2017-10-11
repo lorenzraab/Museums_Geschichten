@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.drl.museums_geschichten.activities.OverviewActivity"
+    android:id="@+id/main_layout"
+    android:background="@color/colorPrimary"
+    style="@style/mainLayoutStyle"
+    android:keepScreenOn="true">
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/storyEditing"
+        android:orientation="horizontal" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/toolbarStyle"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/bottom_navigation"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/back"
+                android:layout_marginEnd="@dimen/small_margin"
+
+                android:background="@color/colorButtonDark"
+                android:onClick="onZuruckButtonClicked"
+                style="@style/textButtonStyle"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/upload"
+                android:layout_marginStart="@dimen/small_margin"
+
+                android:onClick="onUploadButtonClicked"
+                style="@style/textButtonStyle"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="34dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_centerHorizontal="true">
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/beschreibung"
+                        android:layout_gravity="start"
+                        >
+
+                        <EditText
+                            android:id="@+id/edit_text_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing"
+                            android:layout_marginEnd="@dimen/spacing"
+                            android:layout_marginTop="@dimen/spacing"
+                            android:layout_marginBottom="@dimen/spacing"
+                            android:maxLines="1"
+                            android:maxLength="64"
+                            android:hint="@string/title"
+                            />
+
+                        <EditText
+                            android:id="@+id/edit_text_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing"
+                            android:layout_marginEnd="@dimen/spacing"
+                            android:layout_marginBottom="@dimen/spacing"
+                            android:maxLines="8"
+                            android:hint="@string/description"
+                            android:background="@drawable/rectangle"
+                            android:layout_below="@+id/edit_text_title"
+                            />
+
+                    </RelativeLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/details"
+                    android:baselineAligned="false">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:layout_marginStart="8dp"
+
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/recording"
+                            android:gravity="center_vertical"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/audio"
+                                    android:onClick="onRecordButtonClicked"
+                                    android:id="@+id/imageView"
+                                    android:contentDescription="@string/mic_icon" />
+
+                            </LinearLayout>
+
+
+
+
+                            <TextView
+                                android:id="@+id/recording_text"
+                                android:layout_width="0dp"
+                                android:layout_weight="8"
+
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:maxLines="1"
+                                android:onClick="onRecordButtonClicked"
+
+                                android:gravity="start"
+                                android:text="@string/no_record"
+                                style="@style/smallTextStyle"
+                                />
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/play"
+                                android:onClick="onPlay"
+                                android:id="@+id/audio"
+                                android:contentDescription="@string/play_icon" />
+
+                        </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/recording"
+                            android:id="@+id/location"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+
+                            android:onClick="onLocationButtonClicked">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            >
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+
+                                android:src="@drawable/location"
+                                android:id="@+id/imageView2"
+                                android:contentDescription="@string/place_markup_icon" />
+
+
+                        </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/location_text"
+                                android:layout_width="0dp"
+                                android:layout_weight="9"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+
+                                android:text="@string/no_place_chosen"
+                                style="@style/smallTextStyle"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_below="@id/location"
+                            android:baselineAligned="false">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            >
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/calendar"
+                                android:contentDescription="@string/calender_icon" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="9"
+                                android:layout_margin="8dp"
+                                >
+
+                                <EditText
+                                    android:id="@+id/year_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="4"
+                                    android:inputType="number"
+                                    android:background="@drawable/rectangle"
+                                    android:hint="@string/year"
+
+                                    style="@style/smallTextStyle" />
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+
+
+
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/picture_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="false"
+                android:alpha="0.7"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="@dimen/spacing"
+                android:layout_marginBottom="@dimen/spacing"
+                android:layout_marginEnd="@dimen/spacing"
+                android:padding="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle"
+                android:contentDescription="@string/picture_for_the_story"
+                android:onClick="onImageButtonClicked"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+
+
+

@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">"Geschichten aus dem Museum"</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="places_api_key">AIzaSyDTUV4e2sKu1vMzRrHDndOsRtlERGO9RqE</string>
+    <string name="brandiser_geschichten_logo">Geschichten aus dem Museum logo</string>
+    <string name="name">Geschichten aus dem Museum</string>
+    <string name="rec_stop">Stop recording</string>
+    <string name="rec_continue">Continue recording</string>
+    <string name="rec_start">Start Recording</string>
+    <string name="QR_code_instruction">Point your camera at a QR Code</string>
+    <string name="geschichten_aufnehmen">Record a story</string>
+    <string name="story_icon">story icon</string>
+    <string name="read_qr_code">Read QR-Code</string>
+    <string name="qr_code_icon">qr code icon</string>
+    <string name="start_time">00:00:00</string>
+    <string name="zero_minutes">0 Minutes</string>
+    <string name="five_minutes">5 Minutes</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="place">Place</string>
+    <string name="no_place_chosen">Place not chosen</string>
+    <string name="choose_place">Choose a place</string>
+    <string name="year">Year</string>
+    <string name="no_year_chosen">Year not chosen</string>
+    <string name="upload">Upload</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="mic_icon">Microphone icon</string>
+    <string name="no_record">No record</string>
+    <string name="play_icon">Play icon</string>
+    <string name="place_markup_icon">Place markup icon</string>
+    <string name="calender_icon">Calender icon</string>
+    <string name="picture_for_the_story">Picture for the story</string>
+    <string name="take_picture">Take a picture</string>
+    <string name="skip">Skip</string>
+    <string name="take_again">Take again</string>
+    <string name="camera_icon">Camera icon</string>
+    <string name="blank_image_view">Blank image view</string>
+    <string name="dummytext">dummytext</string>
+    <string name="scan_again">Scan again</string>
+    <string name="open_link">Open link</string>
+    <string name="drafts">Drafts</string>
+    <string name="new_story">New story</string>
+    <string name="click_to_start">Click the button to record a story</string>
+    <string name="upload_in_progress">Story is uplaoding. It can take a few minutes.</string>
+    <string name="checkmark_icon">Checkmark icon</string>
+    <string name="upload_success">The story was uploaded. It would be available on storyplatform after validation from moderator.</string>
+    <string name="webpage_link">http://geschichtslab.community-infrastructuring.org/</string>
+    <string name="no_title">No title</string>
+    <string name="Geschichte">Story #</string>
+    <string name="Neue_Geschichte">New story</string>
+    <string name="checkbox">Mitarbeiter</string>
+
+</resources>

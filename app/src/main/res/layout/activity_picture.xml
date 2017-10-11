@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:id="@+id/main_layout"
+    android:keepScreenOn="true"
+    tools:context="com.drl.museums_geschichten.activities.NewRecorderActivity">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/bottom_layout"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/spacing"
+        android:layout_marginRight="@dimen/spacing"
+        android:layout_marginTop="@dimen/spacing">
+
+
+        <ImageView
+            android:id="@+id/picture_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="120dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/blank_image_view" />
+
+
+        <ImageView
+            android:id="@+id/image_icon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:onClick="onImageButtonClicked"
+            android:layout_centerInParent="true"
+            android:src="@drawable/camera"
+            android:padding="@dimen/padding"
+            android:contentDescription="@string/camera_icon" />
+
+        <TextView
+            android:paddingBottom="@dimen/spacing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_icon"
+            android:text="@string/take_picture"
+            style="@style/normalText"
+            android:id="@+id/image_text"
+            android:textAlignment="center"/>
+
+
+    </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            >
+
+            <Button
+                android:id="@+id/zuruck_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/back"
+                android:layout_marginEnd="@dimen/small_margin"
+
+                android:background="@color/colorButtonDark"
+                android:onClick="onZuruckButtonClicked"
+                style="@style/textButtonStyle"/>
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:layout_marginEnd="@dimen/small_margin"
+                android:layout_marginStart="@dimen/small_margin"
+
+                android:text="@string/take_again"
+                android:onClick="onImageButtonClicked"
+                android:background="@color/colorDone"
+                style="@style/textButtonStyle"/>
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/skip"
+                android:layout_marginStart="@dimen/small_margin"
+
+                android:background="@color/colorButtonDark"
+                android:onClick="onSkipButtonClicked"
+                style="@style/textButtonStyle"/>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+</RelativeLayout>
+
+

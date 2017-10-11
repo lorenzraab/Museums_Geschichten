@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.drl.museums_geschichten.activities.MainActivity"
+    android:background="@color/colorPrimary"
+    android:keepScreenOn="true">
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        style="@style/max_width_600"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+
+        <Button
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:onClick="onListButtonClicked"
+                android:background="@android:color/transparent"
+                />
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/bottom_layout">
+
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:contentDescription="@string/brandiser_geschichten_logo"
+                android:src="@drawable/logo"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textAlignment="center"
+                style="@style/titleText"
+                android:textColor="@color/colorTextLight"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                >
+
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/geschichten_aufnehmen"
+                    android:textAlignment="viewStart"
+                    android:gravity="start"
+
+                    android:paddingStart="@dimen/icon_margin"
+                    android:paddingEnd="@dimen/small_margin"
+                    android:layout_marginEnd="@dimen/small_margin"
+
+                    android:background="@color/colorButtonDark"
+                    android:onClick="onRecorderButtonClicked"
+                    style="@style/textButtonStyle"/>
+
+                <ImageView
+                    android:layout_margin="@dimen/spacing"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/story"
+                    android:elevation="100dp"
+                    android:contentDescription="@string/story_icon" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/read_qr_code"
+
+
+                    android:background="@color/colorButtonDark"
+                    android:textAlignment="viewStart"
+                    android:gravity="start"
+                    android:paddingStart="@dimen/icon_margin"
+                    android:paddingEnd="@dimen/small_margin"
+
+                    android:layout_marginStart="@dimen/small_margin"
+
+                    android:onClick="onScannerButtonClicked"
+                    style="@style/textButtonStyle"/>
+
+                <ImageView
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:layout_marginBottom="@dimen/small_margin"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:src="@drawable/qrcode"
+
+                    android:layout_centerVertical="true"
+                    android:elevation="100dp"
+                    android:contentDescription="@string/qr_code_icon" />
+
+
+
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.drl.museums_geschichten.activities.OrtAuswahlActivity"
+    android:id="@+id/map_layout"
+    android:background="@color/colorBackground"
+    style="@style/mainLayoutStyle"
+    android:keepScreenOn="true">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_layout"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_alignParentTop="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ort"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/place"
+
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/place"
+                    style="@style/headerText"/>
+
+
+                <CheckBox
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/check_place"
+                    style="@style/checkboxStory"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/location_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/place"
+                android:text="@string/no_place_chosen"
+                android:layout_margin="@dimen/spacing"
+                style="@style/normalText"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing"
+                android:layout_below="@id/location_text"
+                android:text="@string/choose_place"
+                android:onClick="onLocationButtonClicked"
+                style="@style/textButtonStyle"/>
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/year"
+            android:layout_below="@id/ort"
+            >
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/year_frame"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/year"
+                    android:labelFor="@+id/year_text"
+                    style="@style/headerText"/>
+
+                <CheckBox
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/check_year"
+                    style="@style/checkboxStory"/>
+
+            </RelativeLayout>
+
+
+            <EditText
+                android:id="@id/year_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/no_year_chosen"
+                android:layout_below="@id/year_frame"
+                android:layout_margin="@dimen/spacing"
+                android:maxLength="4"
+                style="@style/normalText"
+                android:inputType="number" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+        <Button
+            android:id="@+id/zuruck_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/back"
+            android:layout_marginEnd="@dimen/small_margin"
+
+            android:background="@color/colorButtonDark"
+            android:onClick="onZuruckButtonClicked"
+            style="@style/textButtonStyle"/>
+
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/small_margin"
+            android:text="@string/next"
+            android:onClick="onSaveButtonClicked"
+            android:background="@color/colorDone"
+            style="@style/textButtonStyle"/>
+
+    </LinearLayout>
+</RelativeLayout>

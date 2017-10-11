@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackground"
+    android:keepScreenOn="true"
+    tools:context="com.drl.museums_geschichten.activities.NewRecorderActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        style="@style/max_width_600">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/padding"
+            android:weightSum="1"
+            android:layout_above="@+id/bottom_layout">
+
+            <com.drl.museums_geschichten.views.WaveformView
+                android:id="@+id/waveform_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/spacing"
+                app:canvasBgColor="@color/colorBackground"
+                app:strokeColor="@color/colorPrimary"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/start_time"
+                android:id="@+id/elapsed_time"
+                android:textAlignment="center"
+                style="@style/timerText"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing">
+
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/progressBar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zero_minutes"
+                    style="@style/smallTextStyle"
+                    android:layout_below="@+id/progressBar"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/five_minutes"
+                    style="@style/smallTextStyle"
+                    android:layout_below="@+id/progressBar"
+                    android:layout_alignParentEnd="true"/>
+
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/spacing"
+                android:padding="@dimen/padding"
+                android:onClick="onRecordButtonClicked"
+                android:clickable="true">
+
+                <ToggleButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:textOn=""
+                    android:textOff=""
+                    android:id="@+id/record_button"
+                    android:layout_gravity="center"
+                    android:background="@drawable/recordbutton"
+                    android:clickable="false"/>
+
+                <TextView
+                    android:id="@+id/text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rec_start"
+                    style="@style/smallTextStyle"
+                    android:textAlignment="center"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            >
+
+
+
+            <Button
+                android:id="@+id/zuruck_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/back"
+                android:layout_marginEnd="@dimen/small_margin"
+
+                android:background="@color/colorButtonDark"
+                android:onClick="onZuruckButtonClicked"
+                style="@style/textButtonStyle"/>
+
+
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/next"
+                android:layout_marginStart="@dimen/small_margin"
+
+                android:onClick="onSaveButtonClicked"
+                android:background="@color/colorDone"
+                style="@style/textButtonStyle"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+
+
+
+

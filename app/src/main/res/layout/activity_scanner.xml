@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    tools:context="com.drl.museums_geschichten.activities.ScannerActivity">
+
+    <FrameLayout
+        android:id="@+id/scanner_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummytext"
+            android:textAlignment="center"
+            style="@style/whiteText"
+            android:background="@color/black_overlay"
+            android:padding="@dimen/spacing"/>
+
+        <LinearLayout
+            android:id="@+id/button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/scan_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/scan_again"
+                android:layout_marginEnd="@dimen/small_margin"
+
+                android:onClick="onScanButtonClicked"
+                style="@style/textButtonStyle"/>
+
+            <Button
+                android:id="@+id/link_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/open_link"
+                android:layout_marginStart="@dimen/small_margin"
+
+                android:onClick="onLinkButtonClicked"
+                style="@style/textButtonStyle"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

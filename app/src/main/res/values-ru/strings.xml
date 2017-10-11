@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">"Geschichten aus dem Museum"</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="places_api_key">AIzaSyDTUV4e2sKu1vMzRrHDndOsRtlERGO9RqE</string>
+    <string name="brandiser_geschichten_logo">Geschichten aus dem Museum logo</string>
+    <string name="name">Brandiser Geschichten</string>
+    <string name="rec_stop">Закончить запись</string>
+    <string name="rec_continue">Продолжить запись</string>
+    <string name="rec_start">Начать запись</string>
+    <string name="QR_code_instruction">Направьте камеру на QR код</string>
+    <string name="geschichten_aufnehmen">Записать историю</string>
+    <string name="story_icon">story icon</string>
+    <string name="read_qr_code">Прочитать QR код</string>
+    <string name="qr_code_icon">qr code icon</string>
+    <string name="start_time">00:00:00</string>
+    <string name="zero_minutes">0 Минут</string>
+    <string name="five_minutes">5 Минут</string>
+    <string name="back">Назад</string>
+    <string name="next">Дальше</string>
+    <string name="place">Место</string>
+    <string name="no_place_chosen">Место не указано</string>
+    <string name="choose_place">Выберите место</string>
+    <string name="year">Год</string>
+    <string name="no_year_chosen">Год не выбран</string>
+    <string name="upload">Загрузить</string>
+    <string name="title">Название</string>
+    <string name="description">Описание</string>
+    <string name="mic_icon">Microphone icon</string>
+    <string name="no_record">Нет записи</string>
+    <string name="play_icon">Play icon</string>
+    <string name="place_markup_icon">Place markup icon</string>
+    <string name="calender_icon">Calender icon</string>
+    <string name="picture_for_the_story">Picture for the story</string>
+    <string name="take_picture">Сделать фото</string>
+    <string name="skip">Пропустить</string>
+    <string name="take_again">Новое фото</string>
+    <string name="camera_icon">Camera icon</string>
+    <string name="blank_image_view">Blank image view</string>
+    <string name="dummytext">dummytext</string>
+    <string name="scan_again">Сканировать снова</string>
+    <string name="open_link">Открыть ссылку</string>
+    <string name="drafts">Черновики</string>
+    <string name="new_story">Новая история</string>
+    <string name="click_to_start">Нажмите на кнопку, чтобы начать запись</string>
+    <string name="upload_in_progress">История загружается. Это может занять несколько минут.</string>
+    <string name="checkmark_icon">Checkmark icon</string>
+    <string name="upload_success">История загружена. Она станет доступна после проверки модератором.</string>
+    <string name="webpage_link">http://geschichtslab.community-infrastructuring.org/</string>
+    <string name="no_title">Нет названия</string>
+    <string name="Geschichte">История #</string>
+    <string name="Neue_Geschichte">Новая история</string>
+    <string name="checkbox">Mitarbeiter</string>
+
+</resources>

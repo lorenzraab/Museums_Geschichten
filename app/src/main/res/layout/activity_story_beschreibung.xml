@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.drl.museums_geschichten.activities.StoryBeschreibungActivity"
+    android:background="@color/colorBackground"
+    style="@style/mainLayoutStyle"
+    android:keepScreenOn="true">
+
+
+            <!-- Dummy item to prevent EditText from receiving focus -->
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/storyEditing"
+        android:orientation="horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:id="@+id/topLevel">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:textAllCaps="true"
+                style="@style/headerText"/>
+
+            <CheckBox
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/check_text"
+                style="@style/checkboxStory"/>
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/edit_text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topLevel"
+            android:layout_marginRight="@dimen/spacing"
+            android:layout_marginLeft="@dimen/spacing"
+            android:layout_marginTop="@dimen/spacing"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            style="@style/normalText"
+            android:maxLines="2"
+            android:maxLength="64"
+            android:hint="@string/title"/>
+
+        <EditText
+            android:id="@+id/edit_text_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_text_title"
+            android:layout_marginRight="@dimen/spacing"
+            android:layout_marginLeft="@dimen/spacing"
+            android:layout_marginTop="@dimen/spacing"
+            android:layout_marginBottom="@dimen/spacing"
+            android:maxLines="8"
+            android:minLines="3"
+            android:hint="@string/description"
+            style="@style/normalText"
+            android:background="@drawable/rectangle"
+
+            />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="onBackButtonClicked"
+            android:layout_weight="1"
+            android:text="@string/back"
+            android:layout_marginEnd="@dimen/small_margin"
+
+            android:background="@color/colorButtonDark"
+            style="@style/textButtonStyle"
+            />
+
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/next"
+            android:layout_marginStart="@dimen/small_margin"
+
+            android:id="@+id/nextw"
+            android:onClick="onWeiterButtonClicked"
+            android:background="@color/colorDone"
+            style="@style/textButtonStyle"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

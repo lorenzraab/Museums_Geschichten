@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.drl.museums_geschichten.activities.OverviewActivity"
+    android:id="@+id/main_layout"
+    android:background="@color/colorPrimary"
+    style="@style/mainLayoutStyle"
+    android:keepScreenOn="true">
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/storyEditing"
+        android:orientation="horizontal" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/toolbarStyle"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/bottom_navigation"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/back"
+                android:background="@color/colorButtonDark"
+                android:onClick="onZuruckButtonClicked"
+                android:layout_marginEnd="@dimen/small_margin"
+
+                style="@style/textButtonStyle"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/upload"
+                android:layout_marginStart="@dimen/small_margin"
+
+                android:onClick="onUploadButtonClicked"
+                style="@style/textButtonStyle"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_margin="30dp"
+            android:background="@color/colorBackground"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/picture_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="false"
+                        android:alpha="0.7"
+                        android:cropToPadding="true"
+                        android:scaleType="centerCrop"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:padding="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rectangle"
+                        android:contentDescription="@string/picture_for_the_story"
+                        android:onClick="onImageButtonClicked"
+                        />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_gravity="center"
+                    android:baselineAligned="false">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/beschreibung"
+                        >
+
+                        <EditText
+                            android:id="@+id/edit_text_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:maxLines="1"
+                            android:maxLength="64"
+                            android:hint="@string/title"
+                            />
+
+                        <EditText
+                            android:id="@+id/edit_text_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_below="@id/edit_text_title"
+                            android:maxLines="8"
+                            android:hint="@string/description"
+                            android:background="@drawable/rectangle"
+                            />
+
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/details"
+                    android:baselineAligned="false">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/recording"
+                            android:gravity="center"
+                            android:onClick="onRecordButtonClicked">
+
+
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/audio"
+                                android:layout_marginStart="@dimen/spacing"
+                                android:layout_marginTop="@dimen/spacing"
+                                android:layout_marginBottom="@dimen/spacing"
+
+                                android:contentDescription="@string/mic_icon" />
+
+                            <TextView
+                                android:id="@+id/recording_text"
+                                android:layout_width="0dp"
+                                android:layout_weight="4"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:layout_gravity="center"
+                                android:text="@string/no_record"
+                                style="@style/smallTextStyle"
+                                />
+
+                            <ImageView
+                                android:layout_marginEnd="@dimen/spacing"
+                                android:layout_marginTop="@dimen/spacing"
+                                android:layout_marginBottom="@dimen/spacing"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/play"
+                                android:layout_gravity="center"
+                                android:onClick="onPlay"
+                                android:id="@+id/audio"
+                                android:contentDescription="@string/play_icon" />
+
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/recording"
+                            android:gravity="center"
+                            android:id="@+id/location"
+                            android:onClick="onLocationButtonClicked">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+
+                                android:src="@drawable/location"
+                                android:layout_marginStart="@dimen/spacing"
+                                android:layout_marginTop="@dimen/spacing"
+                                android:layout_marginBottom="@dimen/spacing"
+                                android:contentDescription="@string/place_markup_icon" />
+
+
+                            <TextView
+                                android:id="@+id/location_text"
+                                android:layout_width="0dp"
+                                android:layout_weight="5"
+                                android:layout_height="wrap_content"
+                                android:text="@string/no_place_chosen"
+                                android:layout_gravity="center"
+                                style="@style/smallTextStyle"
+                                android:layout_margin="8dp"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/location"
+                            android:gravity="center"
+                            >
+
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/calendar"
+                                android:layout_marginStart="@dimen/spacing"
+                                android:layout_marginTop="@dimen/spacing"
+                                android:layout_marginBottom="@dimen/spacing"
+                                android:contentDescription="@string/calender_icon" />
+
+
+                            <EditText
+                                android:id="@+id/year_text"
+                                android:layout_width="0dp"
+                                android:layout_weight="5"
+                                android:layout_height="wrap_content"
+                                android:maxLength="4"
+                                android:inputType="number"
+                                android:layout_margin="8dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/rectangle"
+                                android:hint="@string/no_year_chosen"
+                                style="@style/smallTextStyle" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+
+
+

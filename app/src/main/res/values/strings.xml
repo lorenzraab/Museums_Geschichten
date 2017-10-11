@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">"Geschichten aus dem Museum"</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="places_api_key">AIzaSyDTUV4e2sKu1vMzRrHDndOsRtlERGO9RqE</string>
+    <string name="brandiser_geschichten_logo">Geschichten aus dem Museum logo</string>
+    <string name="name">Geschichten aus dem Museum</string>
+    <string name="rec_stop">Aufnahme stoppen</string>
+    <string name="rec_continue">Aufnahme fortsetzen</string>
+    <string name="rec_start">Aufnahme starten</string>
+    <string name="QR_code_instruction">Zeige mit der Camera auf den QR Code</string>
+    <string name="geschichten_aufnehmen">Geschichten aufnehmen</string>
+    <string name="story_icon">story icon</string>
+    <string name="read_qr_code">QR-Code einlesen</string>
+    <string name="qr_code_icon">qr code icon</string>
+    <string name="start_time">00:00:00</string>
+    <string name="zero_minutes">0 Minuten</string>
+    <string name="five_minutes">5 Minuten</string>
+    <string name="back">Zurück</string>
+    <string name="next">Weiter</string>
+    <string name="place">ORT</string>
+    <string name="no_place_chosen">Kein Ort ausgewählt</string>
+    <string name="choose_place">Ort auswählen</string>
+    <string name="year">JAHR</string>
+    <string name="no_year_chosen">Kein Jahr ausgewählt</string>
+    <string name="upload">Übertragen</string>
+    <string name="title">Titel</string>
+    <string name="description">Beschreibung</string>
+    <string name="mic_icon">microphone icon</string>
+    <string name="no_record">Keine Aufnahme</string>
+    <string name="play_icon">play icon</string>
+    <string name="place_markup_icon">place markup icon</string>
+    <string name="calender_icon">calender_icon</string>
+    <string name="picture_for_the_story">picture for the story</string>
+    <string name="take_picture">Bild aufnehmen</string>
+    <string name="skip">Überspringen</string>
+    <string name="take_again">Neue aufnahme</string>
+    <string name="camera_icon">camera icon</string>
+    <string name="blank_image_view">blank image view</string>
+    <string name="dummytext">dummytext</string>
+    <string name="scan_again">Neu Scannen</string>
+    <string name="open_link">Öffne Link</string>
+    <string name="drafts">Entwürfe</string>
+    <string name="new_story">Neue Geschichte</string>
+    <string name="click_to_start">Klicke unten auf den Button um eine Geschichte aufzunehmen.</string>
+    <string name="upload_in_progress">Geschichte wird hochgeladen. Dies kann einige Minuten dauern.</string>
+    <string name="checkmark_icon">checkmark icon</string>
+    <string name="upload_success">Die Geschichte wurde erfolgreich übertragen. Sie wird auf der Geschichtsplatform angezeigt, sobald sie von uns freigeschaltet wurde.</string>
+    <string name="webpage_link">http://geschichtslab.community-infrastructuring.org/</string>
+    <string name="no_title">Kein Titel</string>
+    <string name="Geschichte">Geschichte #</string>
+    <string name="Neue_Geschichte">Neue Geschichte</string>
+    <string name="checkbox">Mitarbeiter</string>
+
+
+</resources>

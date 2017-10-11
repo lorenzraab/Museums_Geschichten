@@ -1,0 +1,25 @@
+<resources>
+
+    <style name="max_width_600">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+
+    <style name="titleText" parent="normalText">
+        <item name="android:layout_marginTop">@dimen/spacing</item>
+        <item name="android:layout_marginBottom">@dimen/large_spacing</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:fontFamily">sans-serif-bold</item>
+    </style>
+
+
+    <style name="textButtonStyle" parent="baseButtonStyle">
+    <item name="android:background">@drawable/button_fill_dark</item>
+    <item name="android:paddingTop">@dimen/padding</item>
+    <item name="android:paddingBottom">@dimen/padding</item>
+
+    <item name="android:textSize">20sp</item>
+    <item name="android:minHeight">60dp</item>
+    </style>
+
+</resources>
