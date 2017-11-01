@@ -3,10 +3,10 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         config {
-            keyAlias 'myOwnKey'
-            keyPassword 'belinea'
-            storeFile file('/Users/danielstepanov/Desktop/androidSign.jks')
-            storePassword 'ltkmaby'
+            keyAlias 'museumsgeschichten'
+            keyPassword 'ljmr_android'
+            storeFile file('c:/Users/ljmr_/.android/release.keystore')
+            storePassword 'ljmr_android'
         }
     }
     compileSdkVersion 23

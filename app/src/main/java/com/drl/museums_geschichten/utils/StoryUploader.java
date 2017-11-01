@@ -25,7 +25,7 @@ import retrofit2.http.Part;
 public class StoryUploader {
 
     //public static final String API_BASE_URL = "http://192.168.1.5:8081";
-    private static final String API_BASE_URL = "http://geschichtswerkstatt.brandis.eu/wp-admin/";
+    private static final String API_BASE_URL = "http://geschichtslab.community-infrastructuring.org/wp-admin";
 
     private  static final String API_DATE_FORMAT = "yyyy-MM-dd";
 
